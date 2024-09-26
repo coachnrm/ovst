@@ -1,0 +1,43 @@
+﻿@page "/"
+@rendermode InteractiveServer
+@using System.Globalization
+
+<PageTitle>หน้าจอเปิด visit</PageTitle>
+
+<h1>หน้าจอเปิด visit</h1>
+
+<p>
+    <label>
+        HosGuid: 
+        <InputText @bind-Value="HosGuid" style="width: 350px;" disabled/>
+    </label>
+</p>
+
+<p>
+    <label>
+        Vn: 
+        <InputText @bind-Value="Vn" style="width: 350px;" disabled/>
+    </label>
+</p>
+
+<p>
+    <label>
+        Ovst_key: 
+        <InputText @bind-Value="Ovst_key" style="width: 350px;" disabled/>
+    </label>
+</p>
+
+
+
+
+
+
+@code {
+    
+    private string HosGuid = "{"+Guid.NewGuid().ToString()+"}";
+    private string Ovst_key = "9564AB24894CF188CC14EB2D81857600";
+    private string Vn = DateTime.Now.ToString("yyMMddHHmmss", new CultureInfo("th-TH"));
+
+   
+
+}
